@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    place-content: center;
+    height: 100%;
+
+    .heading {
+        font-size: clamp(1.5rem, 0.4rem + 3vw, 5rem);
+        font-weight: 700;
+    }
+
+    .tagline {
+        font-size: clamp(0.9rem, 0.3rem + 1vw, 2rem);
+    }
+}

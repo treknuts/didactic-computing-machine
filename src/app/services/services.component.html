@@ -1,0 +1,12 @@
+<div class="services-wrapper">
+  <div
+    class="card"
+    [style.background-image]="'url(' + service.imageUrl + ')'"
+    *ngFor="let service of services"
+  >
+    <div class="card-info">
+      <h1 class="card-name">{{ service.name }}</h1>
+      <p class="card-description">{{ service.description }}</p>
+    </div>
+  </div>
+</div>

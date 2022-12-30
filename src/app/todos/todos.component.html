@@ -1,0 +1,11 @@
+<div class="todo-wrapper">
+  <h1>Things to learn:</h1>
+  <div class="todo" *ngFor="let todo of todos">
+    <h3 *ngIf="todo.done; else notDone" style="color: green">
+      {{ todo.title }}
+    </h3>
+    <ng-template #notDone
+      ><h3 style="color: red">{{ todo.title }}</h3></ng-template
+    >
+  </div>
+</div>
