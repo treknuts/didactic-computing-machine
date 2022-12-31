@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { TodosComponent } from './todos/todos.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TodosComponent } from './todos/todos.component';
     AboutComponent,
     HomeComponent,
     ServicesComponent,
-    TodosComponent
+    TodosComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
