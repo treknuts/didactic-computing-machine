@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { TodosComponent } from './todos/todos.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { environment } from 'environments/environment';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment))
   ],
   providers: [],
   bootstrap: [AppComponent]
