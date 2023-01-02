@@ -10,6 +10,15 @@ import { TodosComponent } from './todos/todos.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { environment } from 'environments/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { LoginComponent } from './login/login.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AuthService } from "./shared/services/auth.service";
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +28,21 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
     HomeComponent,
     ServicesComponent,
     TodosComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    LoginComponent,
+    RegisterUserComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment))
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

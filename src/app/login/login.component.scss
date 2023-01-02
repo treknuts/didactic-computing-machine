@@ -1,0 +1,10 @@
+.login-wrapper{
+  height: 100%;
+  display: grid;
+  place-content: center;
+
+  .login-input{
+    display: flex;
+    gap: 2em;
+  }
+}
