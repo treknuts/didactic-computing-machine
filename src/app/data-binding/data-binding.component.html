@@ -1,1 +1,13 @@
-<p>data-binding works!</p>
+<div class="dataBinding">
+  <span [style.color]="activeColor">
+    We are DATA BINDING
+  </span>
+  <button mat-raised-button (click)="enableOptions()">Enable Options</button>
+
+  <div *ngFor="let i of availableColors">
+    <input id="i" type="checkbox" [disabled]="userEnabled" (click)="modifyColor(i)"/>
+    <label for="i">{{i}}</label>
+  </div>
+
+
+</div>
