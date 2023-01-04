@@ -6,6 +6,10 @@
     font-family: 'Nunito', sans-serif;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     height: 100vh;
 }

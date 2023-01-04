@@ -1,10 +1,71 @@
-.login-wrapper{
+.wrapper {
   height: 100%;
   display: grid;
-  place-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  background-color: #222;
+  color: #eee;
 
-  .login-input{
-    display: flex;
-    gap: 2em;
+  .image {
+    background: url("https://images.unsplash.com/photo-1599409284444-d61f3797e72f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+    background-size: cover;
+    background-position: 20% center;
+    background-repeat: no-repeat;
   }
+
+  .auth-wrapper {
+    display: grid;
+    place-content: center;
+    font-size: clamp(1rem, .4rem + 2vw, 1.5rem);
+
+    .auth-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25em;
+
+      .sign-in {
+        font-size: clamp(1.5rem, .4rem + 2.5vw, 3.5rem);
+      }
+
+      .text-input {
+        border: 2px solid #222;
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+
+        &:focus {
+          box-shadow: 0em 0em 1em #61d1d3;
+        }
+      }
+
+      .button {
+        border: 2px #222 solid;
+        border-radius: 0.25em;
+        padding: 0.25em 05em;
+        text-align: center;
+        background-color: #72f1b8 ;
+
+        &:focus, &:hover {
+          box-shadow: 0em 0em 1em #61d1d3;
+        }
+      }
+
+      .google {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+  }
+
+  span{
+    width: 100%;
+    text-align: center;
+    margin-top: .75em;
+    .sign-up {
+      cursor: pointer;
+      color: #8ab4f8;
+    }
+  } 
 }
