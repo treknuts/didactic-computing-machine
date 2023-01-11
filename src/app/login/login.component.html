@@ -10,20 +10,27 @@
         #userName
         required
       />
-      <input
-        type="password"
-        class="text-input"
-        placeholder="Password"
-        #userPassword
-        required
-      />
+      <div class="password">
+        <input
+          type="password"
+          class="text-input"
+          placeholder="Password"
+          #userPassword
+          required
+        />
+        <span class="auth-link" routerLink="/forgot-password"
+          >Forgot password?</span
+        >
+      </div>
       <!-- Calling SignIn Api from AuthService -->
+
       <input
         type="button"
         class="button"
         value="Log in"
         (click)="authService.SignIn(userName.value, userPassword.value)"
       />
+
       <span class="or"><span class="orInner">Or</span></span>
       <!-- Calling GoogleAuth Api from AuthService -->
       <button
@@ -36,7 +43,10 @@
       </button>
     </div>
     <span
-      >Don't have an account?<span class="sign-up" routerLink="/register-user">
+      >Don't have an account?<span
+        class="auth-link"
+        routerLink="/register-user"
+      >
         Sign Up</span
       ></span
     >

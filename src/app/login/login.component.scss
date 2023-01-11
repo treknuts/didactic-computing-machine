@@ -24,6 +24,12 @@
       align-items: center;
       gap: 1.25em;
 
+      .password {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
       .sign-in {
         font-size: clamp(1.5rem, .4rem + 2.5vw, 3.5rem);
       }
@@ -43,9 +49,10 @@
         border-radius: 0.25em;
         padding: 0.25em 05em;
         text-align: center;
-        background-color: #72f1b8 ;
+        background-color: #72f1b8;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           box-shadow: 0em 0em 1em #61d1d3;
         }
       }
@@ -59,13 +66,15 @@
     }
   }
 
-  span{
+  span {
     width: 100%;
     text-align: center;
-    margin-top: .75em;
-    .sign-up {
-      cursor: pointer;
-      color: #8ab4f8;
-    }
-  } 
+    margin-top: .25em;
+    font-size: clamp(0.8rem, .4rem + 1.4vw, 1.15rem);
+  }
+
+  .auth-link {
+    cursor: pointer;
+    color: #8ab4f8;
+  }
 }
